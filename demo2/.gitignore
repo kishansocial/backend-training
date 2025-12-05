@@ -1,0 +1,115 @@
+# ----------------------------------------
+# Node & Environment
+# ----------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# ----------------------------------------
+# Logs
+# ----------------------------------------
+logs/
+*.log
+log.txt
+debug.log
+error.log
+
+# PM2 Logs
+.pids
+*.pid
+*.seed
+*.pid.lock
+
+# ----------------------------------------
+# Sequelize Related
+# ----------------------------------------
+/migrations/*
+/seeders/*
+/models/*.js.map
+
+# Optional: Keep migration structure but ignore generated files
+# !migrations/.gitkeep
+# !seeders/.gitkeep
+
+# SQLite files (if using sqlite)
+*.sqlite
+*.sqlite3
+*.db
+
+# Sequelize auto-generated files
+*.bak
+*.tmp
+
+# ----------------------------------------
+# Build & Output
+# ----------------------------------------
+dist/
+build/
+coverage/
+.tmp/
+.cache/
+out/
+public/dist/
+
+# TypeScript (if using ts-node or tsc)
+*.tsbuildinfo
+
+# ----------------------------------------
+# OS/System Files
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# ----------------------------------------
+# IDE Editors
+# ----------------------------------------
+.vscode/
+.vscode/*
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# JetBrains
+.idea/
+*.iml
+
+# ----------------------------------------
+# Docker
+# ----------------------------------------
+docker-compose.override.yml
+docker-data/
+.docker/
+.Dockerfile.swp
+*/.dockerignore
+
+# ----------------------------------------
+# Temporary Uploads
+# ----------------------------------------
+uploads/
+temp/
+tmp/
+*.tmp
+
+# ----------------------------------------
+# Cache / Sessions
+# ----------------------------------------
+.cache/
+.sass-cache/
+.next/
+.nuxt/
+.cache-loader/
+.cache/
+sessions/
