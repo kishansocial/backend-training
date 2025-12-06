@@ -1,9 +1,9 @@
 const userRepo = require("../data/user");
-const permissionModuleRepo=require("../data/permissionModule")
-const userPermissionRepo=require("../data/userPermission")
+const permissionModuleRepo = require("../data/permissionModule");
+const userPermissionRepo = require("../data/userPermission");
+const itemDataRepo = require("../data/item");
 
 const passwordUtil = require("../utils/password");
-
 
 // USER UseCases
 const registerUser = require("./user/registerUser");
@@ -18,9 +18,12 @@ const createPermissionModule = require("./permissionModule/createPermissionModul
 const updatePermissionModule = require("./permissionModule/updatePermissionModule");
 const deletePermissionModule = require("./permissionModule/deletePermissionModule");
 
-
 const createUserPermission = require("./userPermission/createUserPermission");
 const updateUserPermission = require("./userPermission/updateUserPermission");
+
+const creteItem = require("./Item/createItem");
+const updateItem = require("./Item/updateItem");
+const getItem = require("./Item/getItem");
 
 module.exports = {
   // USER UC
@@ -38,4 +41,8 @@ module.exports = {
 
   createUserPermissionUC: createUserPermission({ userPermissionRepo }),
   updateUserPermissionUC: updateUserPermission({ userPermissionRepo }),
+
+  createItemUC: creteItem({ itemDataRepo }),
+  updaetItemUC: updateItem({ itemDataRepo }),
+  getItemUC: getItem({ itemDataRepo }),
 };

@@ -1,13 +1,13 @@
 FROM node:current-alpine3.20
 
-WORKDIR /app
+WORKDIR /src
 
 COPY package.json package-lock.json ./
 
 RUN npm install
 
-COPY . .
+COPY src src
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["npm", "run", "dev"]

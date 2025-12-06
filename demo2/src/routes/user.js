@@ -1,6 +1,6 @@
 const express = require("express");
 const controller = require("../controller/user");
-const { authenticate } = require("../utils/auth");
+const authenticate = require("../utils/auth");
 
 const checkPermission = require("../utils/checkPermission");
 
@@ -32,5 +32,10 @@ router.delete(
   checkPermission("can_delete"),
   controller.softDelete
 );
-
+router.post(
+  "/userCreate",
+  authenticate,
+  checkPermission("can_create"),
+  controller.register
+);
 module.exports = router;

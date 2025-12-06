@@ -58,7 +58,9 @@ module.exports = {
     );
 
     if (result.rows.length === 0) return false;
-
-    return result.rows[0][permissionType] === true;
+  //  console.log(result.rows)
+    return (
+      result.rows[0][permissionType] === true || result.rows[0]["is_admin"]
+    );
   },
 };

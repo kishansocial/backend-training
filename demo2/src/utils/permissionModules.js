@@ -6,7 +6,8 @@ module.exports = async function isIDExist(req, res, next) {
 
     // Fetch user from database
     const user = await getById(userId);
-    console.log(userId, user);
+    req.permissionmodule = user;
+    // console.log(userId, user);
     if (!user) {
       return res.status(401).json({ error: "Modules not exist" });
     }

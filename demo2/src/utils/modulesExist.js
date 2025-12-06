@@ -2,7 +2,7 @@ const { findByModuleCode } = require("../data/permissionModule");
 
 module.exports = async function isIDExist(req, res, next) {
   try {
-    const userId = req.body.module_Code ?? undefined;
+    const userId = req.body.module_code ?? undefined;
 
     if (!userId) {
       return res.status(401).json({ error: "module code not provided" });
